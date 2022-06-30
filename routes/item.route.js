@@ -4,7 +4,7 @@ const { createItem, restock, spend, getItems, deleteItem, getRestocks, getSpends
 
 router.get('/', getItems);
 router.post('/', createItem);
-router.delete('/', deleteItem);
+router.delete('/:id', deleteItem);
 
 router.post('/in', restock);
 router.get('/in', getRestocks);

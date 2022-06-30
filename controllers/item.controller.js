@@ -107,7 +107,7 @@ const deleteItem = (req, res) => {
 
     (async () => {
         try {
-            await query(`DELETE FROM item WHERE id = ${req.body.id}`);
+            await query(`DELETE FROM item WHERE id = ${req.params.id}`);
             return sendResponse(res, 200, "Hapus data barang berhasil", null);
         } catch(error) {
             console.log(error);
